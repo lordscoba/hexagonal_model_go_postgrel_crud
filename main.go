@@ -24,6 +24,7 @@ func main() {
 	db := storage.Connection()
 
 	if configuration.Database.Migrate {
+		fmt.Println("Migration of db test...")
 		migrations.RunAllMigrations(db)
 	}
 

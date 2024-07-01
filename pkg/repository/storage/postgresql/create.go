@@ -8,7 +8,9 @@ import (
 
 func CreateOneRecord(db *gorm.DB, model interface{}) error {
 	result := db.Create(model)
+
 	if result.Error != nil {
+
 		return result.Error
 	}
 	if result.RowsAffected != 1 {
